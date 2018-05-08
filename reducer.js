@@ -6,3 +6,8 @@ const app = combineReducers({
     comments,
     users
 });
+
+const initialState = {
+	comments: [],
+	users: []
+};

@@ -2,7 +2,7 @@ import uuid from uuid;
 
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
-export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
@@ -14,17 +14,17 @@ function addComment(text) {
     }
 };
 
-function editComment(id, text) {
+function removeComment(id) {
     return {
-        type: EDIT_COMMENT,
-        text,
+        type: REMOVE_COMMENT,
         id 
     }
 };
 
-function removeComment(id) {
+function editComment(id, text) {
     return {
-        type: REMOVE_COMMENT,
+        type: EDIT_COMMENT,
+        text,
         id 
     }
 };
